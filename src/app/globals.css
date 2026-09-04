@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*
+ * Design tokens - Capterra-inspired but lighter and cleaner (SRS 1.5).
+ * Card-based, generous whitespace, one warm accent for calls to action.
+ */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --color-canvas: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-ink: #101a2c;
+  --color-muted: #56617a;
+  --color-line: #e4e8f0;
+
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dae7ff;
+  --color-brand-200: #b9d0ff;
+  --color-brand-300: #8bb0ff;
+  --color-brand-400: #5b8bf5;
+  --color-brand-500: #2f6fed;
+  --color-brand-600: #1d59d8;
+  --color-brand-700: #1a48b0;
+  --color-brand-800: #1a3d8f;
+  --color-brand-900: #1a3673;
+
+  --color-accent-400: #ff8a4c;
+  --color-accent-500: #ff6a3d;
+  --color-accent-600: #ec5730;
+
+  --color-mint-50: #ecfdf5;
+  --color-mint-100: #d1fae5;
+  --color-mint-600: #0f9d6b;
+  --color-mint-700: #0b7d55;
+
+  --radius-card: 0.9rem;
+
+  --shadow-card: 0 1px 2px rgba(16, 26, 44, 0.04),
+    0 8px 24px -12px rgba(16, 26, 44, 0.12);
+  --shadow-card-hover: 0 2px 4px rgba(16, 26, 44, 0.06),
+    0 16px 40px -16px rgba(16, 26, 44, 0.22);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-100);
+  }
+
+  a {
+    text-underline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "healthcare",
+    "name": "Healthcare",
+    "slug": "healthcare",
+    "blurb": "Hospitals, clinics, insurers and health-tech handling UAE patient data."
+  },
+  {
+    "id": "finance",
+    "name": "Finance",
+    "slug": "finance",
+    "blurb": "Banks, insurers, payment providers and fintechs under CBUAE, DFSA or FSRA."
+  },
+  {
+    "id": "government",
+    "name": "Government-adjacent",
+    "slug": "government",
+    "blurb": "Entities serving federal, Dubai or Abu Dhabi government with residency and security obligations."
+  },
+  {
+    "id": "general-sme",
+    "name": "General SME",
+    "slug": "general-sme",
+    "blurb": "Businesses of any size whose main obligation is the federal PDPL."
+  }
+]

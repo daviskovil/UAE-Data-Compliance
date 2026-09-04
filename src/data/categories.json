@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pdpl-consultants",
+    "name": "PDPL Consultants",
+    "slug": "pdpl-consultants",
+    "description": "Advisers who help businesses meet the UAE federal Personal Data Protection Law - data mapping, notices, rights processes and DPO support."
+  },
+  {
+    "id": "grc-dpo-services",
+    "name": "GRC & DPO Services",
+    "slug": "grc-dpo-services",
+    "description": "Governance, risk and compliance firms and outsourced Data Protection Officer providers."
+  },
+  {
+    "id": "uae-data-centers",
+    "name": "UAE Data Centers & Cloud",
+    "slug": "uae-data-centers",
+    "description": "TDRA-registered cloud providers and in-country data centres for workloads with residency requirements."
+  },
+  {
+    "id": "healthcare-data-compliance",
+    "name": "Healthcare Data Compliance",
+    "slug": "healthcare-data-compliance",
+    "description": "Specialists in MOHAP, DHA and DoH health data rules, residency exceptions and platform connectivity."
+  },
+  {
+    "id": "finance-cbuae-compliance",
+    "name": "Finance & CBUAE Compliance",
+    "slug": "finance-cbuae-compliance",
+    "description": "Advisers on CBUAE outsourcing and cloud notifications, DFSA and FSRA data rules, and financial-sector resilience."
+  },
+  {
+    "id": "law-firms-data-protection",
+    "name": "Law Firms - Data Protection",
+    "slug": "law-firms-data-protection",
+    "description": "DIFC and ADGM law firms with dedicated data protection and technology advisory practices."
+  }
+]
