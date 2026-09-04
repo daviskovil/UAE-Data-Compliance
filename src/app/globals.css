@@ -2,45 +2,48 @@
 @plugin "@tailwindcss/typography";
 
 /*
- * Design tokens - Capterra-inspired but lighter and cleaner (SRS 1.5).
- * Card-based, generous whitespace, one warm accent for calls to action.
+ * Design tokens. Soft floating cards on a cool blue-grey canvas, bright
+ * cobalt primary, green for positive signals - matching the reference
+ * dashboard UI. Borderless cards defined by diffuse shadow, large radii.
  */
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-  --color-canvas: #f5f7fa;
+  --color-canvas: #eef2f8;
   --color-surface: #ffffff;
-  --color-ink: #101a2c;
-  --color-muted: #56617a;
-  --color-line: #e4e8f0;
+  --color-ink: #0f1729;
+  --color-muted: #5a6478;
+  --color-line: #e8ecf4;
 
-  --color-brand-50: #eef4ff;
-  --color-brand-100: #dae7ff;
-  --color-brand-200: #b9d0ff;
-  --color-brand-300: #8bb0ff;
-  --color-brand-400: #5b8bf5;
-  --color-brand-500: #2f6fed;
-  --color-brand-600: #1d59d8;
-  --color-brand-700: #1a48b0;
-  --color-brand-800: #1a3d8f;
-  --color-brand-900: #1a3673;
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #dfe6ff;
+  --color-brand-200: #c2ceff;
+  --color-brand-300: #97a9ff;
+  --color-brand-400: #6180ff;
+  --color-brand-500: #3b5bff;
+  --color-brand-600: #2f5cff;
+  --color-brand-700: #2348d8;
+  --color-brand-800: #1e3cb0;
+  --color-brand-900: #1d3489;
 
   --color-accent-400: #ff8a4c;
   --color-accent-500: #ff6a3d;
   --color-accent-600: #ec5730;
 
-  --color-mint-50: #ecfdf5;
-  --color-mint-100: #d1fae5;
-  --color-mint-600: #0f9d6b;
-  --color-mint-700: #0b7d55;
+  --color-mint-50: #ecfdf3;
+  --color-mint-100: #d1fadf;
+  --color-mint-500: #22c55e;
+  --color-mint-600: #16a34a;
+  --color-mint-700: #15803d;
 
-  --radius-card: 0.9rem;
+  --radius-card: 1.25rem;
+  --radius-btn: 0.7rem;
 
-  --shadow-card: 0 1px 2px rgba(16, 26, 44, 0.04),
-    0 8px 24px -12px rgba(16, 26, 44, 0.12);
-  --shadow-card-hover: 0 2px 4px rgba(16, 26, 44, 0.06),
-    0 16px 40px -16px rgba(16, 26, 44, 0.22);
+  --shadow-card: 0 1px 2px rgba(20, 30, 55, 0.04),
+    0 10px 30px -12px rgba(20, 30, 55, 0.1);
+  --shadow-card-hover: 0 2px 6px rgba(20, 30, 55, 0.06),
+    0 22px 46px -16px rgba(20, 30, 55, 0.18);
 }
 
 @layer base {

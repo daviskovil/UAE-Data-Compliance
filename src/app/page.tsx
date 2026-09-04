@@ -58,24 +58,22 @@ export default async function HomePage() {
         </div>
       </Container>
 
-      <div className="border-y border-line bg-surface">
-        <Container as="section" className="py-16">
-          <SectionHeading
-            eyebrow="The frameworks"
-            title="Browse by framework"
-            description="Six explainers covering the laws most UAE businesses need to know about."
+      <Container as="section" className="py-16">
+        <SectionHeading
+          eyebrow="The frameworks"
+          title="Browse by framework"
+          description="Six explainers covering the laws most UAE businesses need to know about."
+        />
+        <div className="mt-8">
+          <ShortcutGrid
+            items={frameworks.map((framework) => ({
+              label: framework.name,
+              href: `/frameworks/${framework.slug}`,
+              description: framework.fullName,
+            }))}
           />
-          <div className="mt-8">
-            <ShortcutGrid
-              items={frameworks.map((framework) => ({
-                label: framework.name,
-                href: `/frameworks/${framework.slug}`,
-                description: framework.fullName,
-              }))}
-            />
-          </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
 
       <Container as="section" className="py-16">
         <SectionHeading
@@ -83,51 +81,51 @@ export default async function HomePage() {
           title="From confusion to a shortlist in a few minutes"
           align="center"
         />
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {HOW_IT_WORKS.map((item) => (
-            <div key={item.step} className="text-center">
-              <div className="mx-auto grid h-11 w-11 place-items-center rounded-full bg-brand-600 text-base font-bold text-white">
-                {item.step}
+        <div className="mt-10 rounded-[var(--radius-card)] bg-surface p-8 shadow-[var(--shadow-card)] sm:p-10">
+          <div className="grid gap-8 md:grid-cols-3">
+            {HOW_IT_WORKS.map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="mx-auto grid h-11 w-11 place-items-center rounded-full bg-brand-600 text-base font-bold text-white">
+                  {item.step}
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-ink">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {item.body}
+                </p>
               </div>
-              <h3 className="mt-4 text-base font-semibold text-ink">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {item.body}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <ButtonLink href="/checker" variant="accent" size="lg">
-            Start the compliance checker
-          </ButtonLink>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <ButtonLink href="/checker" variant="accent" size="lg">
+              Start the compliance checker
+            </ButtonLink>
+          </div>
         </div>
       </Container>
 
-      <div className="border-t border-line bg-brand-700">
-        <Container as="section" className="py-14">
-          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-            <div className="max-w-xl">
-              <h2 className="text-2xl font-bold text-white">
-                Run a compliance service?
-              </h2>
-              <p className="mt-2 text-brand-100">
-                List your company in the directory for free and reach UAE
-                businesses looking for help right now.
-              </p>
-            </div>
-            <ButtonLink
-              href="/vendors/submit"
-              variant="accent"
-              size="lg"
-              className="shrink-0"
-            >
-              Submit your company
-            </ButtonLink>
+      <Container as="section" className="pb-16">
+        <div className="flex flex-col items-start justify-between gap-6 rounded-[var(--radius-card)] bg-brand-600 p-8 shadow-[0_18px_40px_-16px_rgba(47,92,255,0.5)] sm:p-10 md:flex-row md:items-center">
+          <div className="max-w-xl">
+            <h2 className="text-2xl font-bold text-white">
+              Run a compliance service?
+            </h2>
+            <p className="mt-2 text-brand-100">
+              List your company in the directory for free and reach UAE
+              businesses looking for help right now.
+            </p>
           </div>
-        </Container>
-      </div>
+          <ButtonLink
+            href="/vendors/submit"
+            variant="accent"
+            size="lg"
+            className="shrink-0"
+          >
+            Submit your company
+          </ButtonLink>
+        </div>
+      </Container>
 
       <Container as="section" className="py-16">
         <div className="flex items-end justify-between gap-4">

@@ -16,9 +16,9 @@ export function Card({
 }) {
   return (
     <Tag
-      className={`rounded-[var(--radius-card)] border border-line bg-surface shadow-[var(--shadow-card)] ${
+      className={`rounded-[var(--radius-card)] bg-surface shadow-[var(--shadow-card)] ${
         interactive
-          ? "transition-shadow transition-transform hover:-translate-y-0.5 hover:shadow-[var(--shadow-card-hover)]"
+          ? "transition-shadow transition-transform duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]"
           : ""
       } ${className}`}
       {...rest}

@@ -2,15 +2,15 @@ import { ButtonLink } from "@/components/ui/Button";
 
 export function Hero({ vendorCount }: { vendorCount: number }) {
   return (
-    <section className="relative overflow-hidden border-b border-line bg-surface">
+    <section className="relative overflow-hidden bg-surface">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(60rem_30rem_at_75%_-10%,var(--color-brand-50),transparent)]"
       />
-      <div className="container-page relative py-16 sm:py-20 lg:py-24">
+      <div className="container-page relative pt-16 pb-24 sm:pt-20 sm:pb-28 lg:pt-24">
         <div className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-canvas px-3 py-1 text-xs font-medium text-muted">
-            <span className="h-1.5 w-1.5 rounded-full bg-mint-600" />
+          <span className="inline-flex items-center gap-2 rounded-full bg-surface px-3.5 py-1.5 text-xs font-medium text-muted shadow-[var(--shadow-card)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-mint-500" />
             PDPL &middot; TDRA/CCRF &middot; NESA &middot; DESC &middot; CBUAE
             &middot; Health data
           </span>
