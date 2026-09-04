@@ -98,7 +98,7 @@ export default async function HomePage() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <ButtonLink href="/checker" variant="accent" size="lg">
+            <ButtonLink href="/checker" variant="primary" size="lg">
               Start the compliance checker
             </ButtonLink>
           </div>

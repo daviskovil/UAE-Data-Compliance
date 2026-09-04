@@ -23,7 +23,7 @@ export function Hero({ vendorCount }: { vendorCount: number }) {
             apply, and a directory of verified vendors who can help you comply.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <ButtonLink href="/checker" variant="accent" size="lg">
+            <ButtonLink href="/checker" variant="primary" size="lg">
               Take the free compliance checker
             </ButtonLink>
             <ButtonLink href="/directory" variant="outline" size="lg">

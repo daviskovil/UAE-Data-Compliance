@@ -137,7 +137,7 @@ export default async function FrameworkPage({
             </p>
             <ButtonLink
               href="/checker"
-              variant="accent"
+              variant="primary"
               size="sm"
               className="mt-4"
             >

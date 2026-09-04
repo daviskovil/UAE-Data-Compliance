@@ -48,7 +48,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <ButtonLink href="/checker" variant="accent" size="sm">
+          <ButtonLink href="/checker" variant="primary" size="sm">
             Start the checker
           </ButtonLink>
         </div>
@@ -98,7 +98,7 @@ export function SiteHeader() {
             ))}
             <ButtonLink
               href="/checker"
-              variant="accent"
+              variant="primary"
               size="md"
               className="mt-2"
               onClick={() => setOpen(false)}

@@ -23,7 +23,7 @@ export function Field({
         className="flex items-center gap-1 text-sm font-medium text-ink"
       >
         {label}
-        {required ? <span className="text-accent-600">*</span> : null}
+        {required ? <span className="text-danger-500">*</span> : null}
       </label>
       {hint ? <p className="mt-0.5 text-xs text-muted">{hint}</p> : null}
       <div className="mt-1.5">{children}</div>

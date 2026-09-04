@@ -23,7 +23,7 @@ export function AdminLogin() {
         />
       </Field>
       {error ? (
-        <p className="text-sm text-accent-600">{error}</p>
+        <p className="text-sm text-danger-600">{error}</p>
       ) : null}
       <Button type="submit" disabled={pending}>
         {pending ? "Checking..." : "Sign in"}

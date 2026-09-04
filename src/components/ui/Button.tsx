@@ -11,7 +11,7 @@ const variants: Record<Variant, string> = {
   primary:
     "bg-brand-600 text-white shadow-[0_6px_16px_-6px_rgba(47,92,255,0.6)] hover:bg-brand-700",
   accent:
-    "bg-accent-500 text-white shadow-[0_6px_16px_-6px_rgba(255,106,61,0.55)] hover:bg-accent-600",
+    "bg-accent-600 text-white shadow-[0_6px_16px_-6px_rgba(4,154,76,0.55)] hover:bg-accent-700",
   outline:
     "bg-surface text-ink shadow-[var(--shadow-card)] hover:text-brand-700",
   ghost: "text-brand-700 hover:bg-brand-50",

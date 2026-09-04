@@ -27,15 +27,26 @@
   --color-brand-800: #1e3cb0;
   --color-brand-900: #1d3489;
 
-  --color-accent-400: #ff8a4c;
-  --color-accent-500: #ff6a3d;
-  --color-accent-600: #ec5730;
+  /* UAE-flag green - positive actions, "verified", success, submit CTAs. */
+  --color-accent-50: #e6f6ec;
+  --color-accent-100: #c2e9cf;
+  --color-accent-400: #1eb46e;
+  --color-accent-500: #049a4c;
+  --color-accent-600: #03823f;
+  --color-accent-700: #026634;
 
-  --color-mint-50: #ecfdf3;
-  --color-mint-100: #d1fadf;
-  --color-mint-500: #22c55e;
-  --color-mint-600: #16a34a;
-  --color-mint-700: #15803d;
+  /* Alias kept for existing "success" usage - same green as accent. */
+  --color-mint-50: #e6f6ec;
+  --color-mint-100: #c2e9cf;
+  --color-mint-500: #049a4c;
+  --color-mint-600: #03823f;
+  --color-mint-700: #026634;
+
+  /* Errors / destructive only. */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
 
   --radius-card: 1.25rem;
   --radius-btn: 0.7rem;

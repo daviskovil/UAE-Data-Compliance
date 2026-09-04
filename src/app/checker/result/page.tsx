@@ -52,7 +52,7 @@ export default async function CheckerResultPage({
             This page shows the outcome of the compliance checker. Run it to see
             which frameworks apply to you.
           </p>
-          <ButtonLink href="/checker" variant="accent" className="mt-6">
+          <ButtonLink href="/checker" variant="primary" className="mt-6">
             Start the checker
           </ButtonLink>
         </div>
