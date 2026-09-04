@@ -3,6 +3,12 @@ title: PDPL, one year on - what businesses still get wrong
 slug: pdpl-what-changed
 publishedAt: 2026-08-15
 relatedFramework: pdpl
+category: PDPL
+topics:
+  - PDPL
+  - GDPR
+  - Free zones
+  - DPO
 excerpt: >-
   Three recurring gaps we see when UAE businesses assume their GDPR programme
   already covers the PDPL.

@@ -1,81 +1,119 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
-import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { getBlogPosts, getFrameworks } from "@/lib/content";
+import { BlogCard } from "@/components/blog/BlogCard";
+import { BlogSidebar, type CategoryCount } from "@/components/blog/BlogSidebar";
+import { getBlogPosts } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Regulation updates",
+  title: "Blog",
   description:
-    "Short, practical notes on changes to UAE data protection and residency law.",
+    "Practical notes on changes to UAE data protection and residency law and what they mean for businesses.",
   path: "/blog",
 });
 
-function formatDate(value: string) {
-  if (!value) return "";
-  const date = new Date(value);
-  return Number.isNaN(date.getTime())
-    ? value
-    : date.toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-      });
+type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
+function first(value: string | string[] | undefined) {
+  return Array.isArray(value) ? value[0] : value;
 }
 
-export default function BlogIndexPage() {
-  const posts = getBlogPosts();
-  const frameworks = getFrameworks();
+export default async function BlogIndexPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const sp = await searchParams;
+  const category = first(sp.category);
+  const topic = first(sp.topic);
+  const query = (first(sp.q) ?? "").toLowerCase().trim();
+
+  const allPosts = getBlogPosts();
+
+  const categories: CategoryCount[] = Object.entries(
+    allPosts.reduce<Record<string, number>>((acc, post) => {
+      acc[post.category] = (acc[post.category] ?? 0) + 1;
+      return acc;
+    }, {}),
+  )
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+
+  const topics = [...new Set(allPosts.flatMap((p) => p.topics))].sort();
+
+  const posts = allPosts.filter((post) => {
+    if (category && post.category !== category) return false;
+    if (topic && !post.topics.includes(topic)) return false;
+    if (query) {
+      const haystack = [
+        post.title,
+        post.excerpt,
+        post.category,
+        ...post.topics,
+      ]
+        .join(" ")
+        .toLowerCase();
+      if (!haystack.includes(query)) return false;
+    }
+    return true;
+  });
 
   return (
-    <Container className="py-14">
-      <div className="max-w-2xl">
-        <h1 className="text-3xl font-bold tracking-tight text-ink">
-          Regulation updates
-        </h1>
-        <p className="mt-3 text-base leading-relaxed text-muted">
-          Practical notes on how UAE data law is changing and what it means for
-          businesses. Posts are written by the site operator.
-        </p>
+    <Container className="py-10">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="max-w-2xl">
+          <h1 className="text-3xl font-bold tracking-tight text-ink">Blog</h1>
+          <p className="mt-2 text-base leading-relaxed text-muted">
+            Practical notes on how UAE data law is changing and what it means
+            for businesses. Written by the site operator.
+          </p>
+        </div>
+        <nav className="text-sm text-muted">
+          <Link href="/" className="hover:text-brand-700">
+            Home
+          </Link>
+          <span className="mx-1.5">/</span>
+          <span className="font-medium text-ink">Blog</span>
+        </nav>
       </div>
 
-      <div className="mt-8 space-y-4">
-        {posts.length === 0 ? (
-          <p className="text-sm text-muted">No posts yet.</p>
-        ) : (
-          posts.map((post) => (
-            <Card key={post.slug} interactive className="p-6">
-              <div className="flex flex-wrap items-center gap-2 text-xs text-muted">
-                <time>{formatDate(post.publishedAt)}</time>
-                {post.relatedFramework ? (
-                  <Badge tone="brand">
-                    {frameworks.find((f) => f.slug === post.relatedFramework)
-                      ?.name ?? post.relatedFramework.toUpperCase()}
-                  </Badge>
-                ) : null}
-              </div>
-              <h2 className="mt-2 text-lg font-semibold text-ink">
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="hover:text-brand-700"
-                >
-                  {post.title}
+      <p className="mt-6 text-xs font-medium uppercase tracking-wide text-muted">
+        Showing {posts.length} of {allPosts.length} article
+        {allPosts.length === 1 ? "" : "s"}
+        {category ? ` in ${category}` : ""}
+        {topic ? ` tagged ${topic}` : ""}
+      </p>
+
+      <div className="mt-5 grid gap-8 lg:grid-cols-[minmax(0,1fr)_19rem]">
+        <div>
+          {posts.length === 0 ? (
+            <div className="rounded-[var(--radius-card)] border border-dashed border-line bg-surface p-10 text-center">
+              <p className="text-sm text-muted">
+                No articles match this filter.{" "}
+                <Link href="/blog" className="font-medium text-brand-700">
+                  Clear filters
                 </Link>
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {post.excerpt}
               </p>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="mt-3 inline-block text-sm font-semibold text-brand-700 hover:text-brand-800"
-              >
-                Read &rarr;
-              </Link>
-            </Card>
-          ))
-        )}
+            </div>
+          ) : (
+            <div className="grid gap-5 sm:grid-cols-2">
+              {posts.map((post) => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <aside>
+          <BlogSidebar
+            categories={categories}
+            topics={topics}
+            total={allPosts.length}
+            activeCategory={category}
+            activeTopic={topic}
+          />
+        </aside>
       </div>
     </Container>
   );

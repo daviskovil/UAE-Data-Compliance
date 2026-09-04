@@ -52,12 +52,17 @@ export default async function BlogPostPage({
           href="/blog"
           className="text-sm font-medium text-brand-700 hover:text-brand-800"
         >
-          &larr; All updates
+          &larr; All articles
         </Link>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-ink">
+        <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-500">
+          {post.category}
+        </p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink">
           {post.title}
         </h1>
-        <p className="mt-2 text-sm text-muted">{formatDate(post.publishedAt)}</p>
+        <p className="mt-2 text-sm text-muted">
+          {formatDate(post.publishedAt)} &middot; {post.readingMinutes} min read
+        </p>
         <div
           className="prose prose-slate mt-8 max-w-none prose-a:text-brand-700"
           dangerouslySetInnerHTML={{ __html: post.bodyHtml }}

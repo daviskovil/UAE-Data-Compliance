@@ -130,5 +130,8 @@ export interface BlogPost {
   publishedAt: string;
   excerpt: string;
   relatedFramework?: string;
+  category: string;
+  topics: string[];
+  readingMinutes: number;
   bodyHtml: string;
 }

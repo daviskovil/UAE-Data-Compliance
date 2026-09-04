@@ -3,6 +3,11 @@ title: Why we built the UAE Data Compliance Directory
 slug: welcome-uae-data-compliance-directory
 publishedAt: 2026-09-01
 relatedFramework: pdpl
+category: Announcements
+topics:
+  - Getting started
+  - Directory
+  - PDPL
 excerpt: >-
   UAE data law is spread across a federal privacy law, sector regulators, and
   free-zone regimes. This directory exists to help businesses work out what

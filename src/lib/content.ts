@@ -60,14 +60,24 @@ export function getFramework(slug: string): Framework | null {
 
 function toBlogPost(slug: string, raw: string): BlogPost {
   const { data, content } = matter(raw);
+  const words = content.trim().split(/\s+/).filter(Boolean).length;
+  const relatedFramework = data.relatedFramework
+    ? String(data.relatedFramework)
+    : undefined;
+  const category = data.category
+    ? String(data.category)
+    : relatedFramework
+      ? (getFramework(relatedFramework)?.name ?? "Regulation updates")
+      : "Regulation updates";
   return {
     title: String(data.title ?? slug),
     slug: String(data.slug ?? slug),
     publishedAt: String(data.publishedAt ?? ""),
     excerpt: String(data.excerpt ?? ""),
-    relatedFramework: data.relatedFramework
-      ? String(data.relatedFramework)
-      : undefined,
+    relatedFramework,
+    category,
+    topics: Array.isArray(data.topics) ? data.topics.map(String) : [],
+    readingMinutes: Math.max(1, Math.round(words / 200)),
     bodyHtml: marked.parse(content, { async: false }) as string,
   };
 }
