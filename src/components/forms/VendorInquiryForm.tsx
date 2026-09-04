@@ -44,7 +44,7 @@ export function VendorInquiryForm({
         />
       </Field>
       <FormStatus state={state} />
-      <Button type="submit" variant="accent" disabled={pending}>
+      <Button type="submit" variant="primary" disabled={pending}>
         {pending ? "Sending..." : "Request an introduction"}
       </Button>
       <p className="text-xs text-muted">

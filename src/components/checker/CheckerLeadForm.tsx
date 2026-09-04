@@ -47,7 +47,7 @@ export function CheckerLeadForm({
         />
       </Field>
       <FormStatus state={state} />
-      <Button type="submit" variant="accent" disabled={pending}>
+      <Button type="submit" variant="primary" disabled={pending}>
         {pending ? "Sending..." : "Request intros"}
       </Button>
     </form>

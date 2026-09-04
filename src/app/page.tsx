@@ -106,19 +106,19 @@ export default async function HomePage() {
       </Container>
 
       <Container as="section" className="pb-16">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-[var(--radius-card)] bg-brand-600 p-8 shadow-[0_18px_40px_-16px_rgba(47,92,255,0.5)] sm:p-10 md:flex-row md:items-center">
+        <div className="flex flex-col items-start justify-between gap-6 rounded-[var(--radius-card)] bg-ink p-8 shadow-[0_18px_40px_-16px_rgba(18,20,26,0.4)] sm:p-10 md:flex-row md:items-center">
           <div className="max-w-xl">
             <h2 className="text-2xl font-bold text-white">
               Run a compliance service?
             </h2>
-            <p className="mt-2 text-brand-100">
+            <p className="mt-2 text-white/70">
               List your company in the directory for free and reach UAE
               businesses looking for help right now.
             </p>
           </div>
           <ButtonLink
             href="/vendors/submit"
-            variant="accent"
+            variant="primary"
             size="lg"
             className="shrink-0"
           >

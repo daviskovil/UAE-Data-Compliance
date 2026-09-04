@@ -75,7 +75,7 @@ export function VendorSubmissionForm({
         email after submitting.
       </p>
       <FormStatus state={state} />
-      <Button type="submit" variant="accent" size="lg" disabled={pending}>
+      <Button type="submit" variant="primary" size="lg" disabled={pending}>
         {pending ? "Submitting..." : "Submit for review"}
       </Button>
     </form>
