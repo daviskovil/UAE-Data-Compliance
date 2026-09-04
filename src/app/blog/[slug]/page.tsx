@@ -89,46 +89,49 @@ export default async function BlogPostPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="mx-auto max-w-3xl">
-        <nav className="text-sm text-muted">
-          <Link href="/" className="hover:text-brand-700">
-            Home
-          </Link>
-          <span className="mx-1.5">/</span>
-          <Link href="/blog" className="hover:text-brand-700">
-            Blog
-          </Link>
-          <span className="mx-1.5">/</span>
-          <span className="text-ink">{post.category}</span>
-        </nav>
+      <div className="mx-auto grid max-w-3xl gap-x-12 gap-y-10 lg:max-w-5xl lg:grid-cols-[minmax(0,1fr)_15rem]">
+        <div className="min-w-0">
+          <nav className="text-sm text-muted">
+            <Link href="/" className="hover:text-brand-700">
+              Home
+            </Link>
+            <span className="mx-1.5">/</span>
+            <Link href="/blog" className="hover:text-brand-700">
+              Blog
+            </Link>
+            <span className="mx-1.5">/</span>
+            <span className="text-ink">{post.category}</span>
+          </nav>
 
-        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-500">
-          {post.category}
-        </p>
-        <h1 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl">
-          {post.title}
-        </h1>
-        <p className="mt-3 text-sm text-muted">
-          {post.author ? `${post.author} · ` : ""}
-          {formatDate(post.publishedAt)}
-          {post.updatedAt && post.updatedAt !== post.publishedAt
-            ? ` · updated ${formatDate(post.updatedAt)}`
-            : ""}
-          {" · "}
-          {post.readingMinutes} min read
-        </p>
-      </div>
+          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-500">
+            {post.category}
+          </p>
+          <h1 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl">
+            {post.title}
+          </h1>
+          <p className="mt-3 text-sm text-muted">
+            {post.author ? `${post.author} · ` : ""}
+            {formatDate(post.publishedAt)}
+            {post.updatedAt && post.updatedAt !== post.publishedAt
+              ? ` · updated ${formatDate(post.updatedAt)}`
+              : ""}
+            {" · "}
+            {post.readingMinutes} min read
+          </p>
 
-      {post.image ? (
-        <div className="mx-auto mt-8 max-w-4xl overflow-hidden rounded-[var(--radius-card)] shadow-[var(--shadow-card)]">
-          <BlogCover post={post} priority aspectClass="aspect-[1200/630]" />
-        </div>
-      ) : null}
+          {post.image ? (
+            <div className="mt-8 overflow-hidden rounded-[var(--radius-card)] shadow-[var(--shadow-card)]">
+              <BlogCover
+                post={post}
+                priority
+                aspectClass="aspect-[1200/630]"
+                imgClassName="object-cover object-center"
+              />
+            </div>
+          ) : null}
 
-      <div className="mx-auto mt-10 grid max-w-3xl gap-12 lg:max-w-5xl lg:grid-cols-[1fr_15rem]">
-        <article className="min-w-0">
-          <div
-            className="prose prose-slate max-w-none prose-headings:scroll-mt-24 prose-headings:tracking-tight prose-h2:mt-10 prose-h2:text-xl prose-h3:text-base prose-a:font-medium prose-a:text-brand-700 hover:prose-a:text-brand-800 prose-strong:text-ink prose-blockquote:border-l-brand-300 prose-blockquote:bg-brand-50/60 prose-blockquote:py-1 prose-blockquote:not-italic prose-blockquote:text-muted [&_hr]:mx-auto [&_hr]:my-12 [&_hr]:w-16 [&_hr]:border-t-2 [&_hr]:border-brand-100 [&_li]:my-1"
+          <article
+            className="prose prose-slate mt-10 max-w-none prose-headings:scroll-mt-24 prose-headings:tracking-tight prose-h2:mt-10 prose-h2:text-xl prose-h3:text-base prose-a:font-medium prose-a:text-brand-700 hover:prose-a:text-brand-800 prose-strong:text-ink prose-blockquote:border-l-brand-300 prose-blockquote:bg-brand-50/60 prose-blockquote:py-1 prose-blockquote:not-italic prose-blockquote:text-muted [&_hr]:mx-auto [&_hr]:my-12 [&_hr]:w-16 [&_hr]:border-t-2 [&_hr]:border-brand-100 [&_li]:my-1"
             dangerouslySetInnerHTML={{ __html: post.bodyHtml }}
           />
 
@@ -180,7 +183,7 @@ export default async function BlogPostPage({
               &larr; All articles
             </Link>
           </div>
-        </article>
+        </div>
 
         {tocHeadings.length > 2 ? (
           <aside className="hidden lg:block">
