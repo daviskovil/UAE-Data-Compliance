@@ -1,25 +1,47 @@
 import type { BlogPost } from "@/data/types";
 
 /**
- * Deterministic generated cover for a post - we have no cover images yet.
- * Dark panel, faint grid, a brand-coloured glow keyed off the slug, and the
- * category set large and faded. Swap for real cover art later (add an
- * `image` field to the frontmatter and BlogPost type).
+ * Card / hero cover for a post.
+ *
+ * If the post has an `image` in its frontmatter it is used (object-cover);
+ * otherwise a deterministic branded panel is generated from the slug.
  */
 export function BlogCover({
   post,
   className = "",
+  aspectClass = "aspect-[16/10]",
+  imgClassName = "object-cover object-center",
+  priority = false,
 }: {
-  post: Pick<BlogPost, "slug" | "category" | "title">;
+  post: Pick<BlogPost, "slug" | "category" | "title" | "image" | "imageAlt">;
   className?: string;
+  aspectClass?: string;
+  imgClassName?: string;
+  priority?: boolean;
 }) {
+  if (post.image) {
+    return (
+      <div
+        className={`relative overflow-hidden bg-canvas ${aspectClass} ${className}`}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={post.image}
+          alt={post.imageAlt ?? post.title}
+          className={`h-full w-full ${imgClassName}`}
+          loading={priority ? "eager" : "lazy"}
+        />
+      </div>
+    );
+  }
+
   const hash = [...post.slug].reduce((acc, c) => acc + c.charCodeAt(0), 0);
   const red = hash % 2 === 0;
   const glow = red ? "#C8102E" : "#00843D";
 
   return (
     <div
-      className={`relative flex aspect-[16/10] items-end overflow-hidden bg-[#1c1e25] ${className}`}
+      className={`relative flex items-end overflow-hidden bg-[#1c1e25] ${aspectClass} ${className}`}
     >
       <div
         aria-hidden="true"
@@ -41,7 +63,10 @@ export function BlogCover({
         <span className="block max-w-[14ch] text-2xl font-extrabold leading-tight tracking-tight text-white/85">
           {post.category}
         </span>
-        <span className="mt-1 block h-1 w-10 rounded-full" style={{ background: glow }} />
+        <span
+          className="mt-1 block h-1 w-10 rounded-full"
+          style={{ background: glow }}
+        />
       </div>
     </div>
   );

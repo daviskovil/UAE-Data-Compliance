@@ -7,7 +7,11 @@ export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-[var(--radius-card)] bg-surface shadow-[var(--shadow-card)] transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
       <Link href={href} aria-label={post.title}>
-        <BlogCover post={post} />
+        <BlogCover
+          post={post}
+          aspectClass="aspect-[16/9]"
+          imgClassName="object-cover object-[78%_center]"
+        />
       </Link>
       <div className="flex flex-1 flex-col p-5">
         <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-500">

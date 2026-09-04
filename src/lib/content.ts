@@ -11,7 +11,8 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
-import type { BlogPost, Framework } from "@/data/types";
+import type { BlogHeading, BlogPost, Framework } from "@/data/types";
+import { expandShortcodes } from "./blogShortcodes";
 
 const CONTENT_DIR = path.join(process.cwd(), "src", "content");
 const FRAMEWORK_DIR = path.join(CONTENT_DIR, "frameworks");
@@ -58,6 +59,37 @@ export function getFramework(slug: string): Framework | null {
   return file ? toFramework(file.slug, file.raw) : null;
 }
 
+function headingSlug(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/<[^>]+>/g, "")
+    .replace(/&[a-z]+;/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/** Add stable ids to h2/h3 in rendered HTML and collect them for a TOC. */
+function withHeadingAnchors(html: string): {
+  html: string;
+  headings: BlogHeading[];
+} {
+  const headings: BlogHeading[] = [];
+  const used = new Set<string>();
+  const out = html.replace(
+    /<(h[23])>([\s\S]*?)<\/\1>/g,
+    (_whole, tag: "h2" | "h3", inner: string) => {
+      const text = inner.replace(/<[^>]+>/g, "").trim();
+      let id = headingSlug(text) || `section-${headings.length + 1}`;
+      let n = 2;
+      while (used.has(id)) id = `${headingSlug(text)}-${n++}`;
+      used.add(id);
+      headings.push({ id, text, level: tag === "h2" ? 2 : 3 });
+      return `<${tag} id="${id}">${inner}</${tag}>`;
+    },
+  );
+  return { html: out, headings };
+}
+
 function toBlogPost(slug: string, raw: string): BlogPost {
   const { data, content } = matter(raw);
   const words = content.trim().split(/\s+/).filter(Boolean).length;
@@ -69,16 +101,27 @@ function toBlogPost(slug: string, raw: string): BlogPost {
     : relatedFramework
       ? (getFramework(relatedFramework)?.name ?? "Regulation updates")
       : "Regulation updates";
+
+  const rendered = marked.parse(expandShortcodes(content), {
+    async: false,
+  }) as string;
+  const { html, headings } = withHeadingAnchors(rendered);
+
   return {
     title: String(data.title ?? slug),
     slug: String(data.slug ?? slug),
     publishedAt: String(data.publishedAt ?? ""),
+    updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
     excerpt: String(data.excerpt ?? ""),
     relatedFramework,
     category,
     topics: Array.isArray(data.topics) ? data.topics.map(String) : [],
+    image: data.image ? String(data.image) : undefined,
+    imageAlt: data.imageAlt ? String(data.imageAlt) : undefined,
+    author: data.author ? String(data.author) : undefined,
     readingMinutes: Math.max(1, Math.round(words / 200)),
-    bodyHtml: marked.parse(content, { async: false }) as string,
+    headings,
+    bodyHtml: html,
   };
 }
 

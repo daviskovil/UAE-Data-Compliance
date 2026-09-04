@@ -124,14 +124,26 @@ export interface Lead extends LeadInput {
   createdAt: string;
 }
 
+export interface BlogHeading {
+  id: string;
+  text: string;
+  level: 2 | 3;
+}
+
 export interface BlogPost {
   title: string;
   slug: string;
   publishedAt: string;
+  updatedAt?: string;
   excerpt: string;
   relatedFramework?: string;
   category: string;
   topics: string[];
+  /** Path under /public, e.g. "/blog/pdpl-guide-hero.svg". */
+  image?: string;
+  imageAlt?: string;
+  author?: string;
   readingMinutes: number;
+  headings: BlogHeading[];
   bodyHtml: string;
 }
