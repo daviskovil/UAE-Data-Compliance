@@ -33,3 +33,6 @@ next-env.d.ts
 
 # local dev data written by the LocalRepository (submissions, leads, checker sessions)
 /.data/
+
+# dev-watchdog logs (scripts/dev-watchdog.ps1)
+/logs/
