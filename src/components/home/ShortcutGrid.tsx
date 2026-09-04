@@ -8,7 +8,7 @@ export interface Shortcut {
 
 export function ShortcutGrid({ items }: { items: Shortcut[] }) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid items-start gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => (
         <Link
           key={item.href}

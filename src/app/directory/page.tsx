@@ -67,19 +67,22 @@ export default async function DirectoryPage({
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted">
           Browse by category
         </h2>
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-4 grid items-start gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
             <Card
               key={category.slug}
               interactive
               as={Link}
               href={`/directory/${category.slug}`}
-              className="p-4"
+              className="group flex flex-col p-5"
             >
-              <span className="text-sm font-semibold text-ink">
+              <span className="flex items-center justify-between gap-2 text-sm font-bold text-ink">
                 {category.name}
+                <span className="text-muted transition-transform group-hover:translate-x-0.5">
+                  &rarr;
+                </span>
               </span>
-              <span className="mt-1 block text-xs leading-relaxed text-muted">
+              <span className="mt-1.5 block text-xs leading-relaxed text-muted">
                 {category.description}
               </span>
             </Card>

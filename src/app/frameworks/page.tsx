@@ -30,34 +30,47 @@ export default function FrameworksIndexPage() {
         </p>
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
+      <div className="mt-8 grid items-start gap-4 sm:grid-cols-2">
         {frameworks.map((framework) => (
-          <Card key={framework.slug} interactive className="flex flex-col p-6">
-            <div className="flex items-center gap-2">
-              <h2 className="text-lg font-semibold text-ink">
-                <Link
-                  href={`/frameworks/${framework.slug}`}
-                  className="hover:text-brand-700"
+          <Card
+            key={framework.slug}
+            as={Link}
+            href={`/frameworks/${framework.slug}`}
+            interactive
+            className="group flex flex-col p-5"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-2">
+                  <h2 className="text-base font-bold text-ink">
+                    {framework.name}
+                  </h2>
+                  {framework.priority ? (
+                    <Badge tone="accent">Start here</Badge>
+                  ) : null}
+                </div>
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted">
+                  {framework.fullName}
+                </p>
+              </div>
+              <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-600 group-hover:text-white">
+                <svg
+                  viewBox="0 0 20 20"
+                  className="h-3.5 w-3.5 fill-none stroke-current"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                  {framework.name}
-                </Link>
-              </h2>
-              {framework.priority ? (
-                <Badge tone="accent">Start here</Badge>
-              ) : null}
+                  <path d="M7 4l6 6-6 6" />
+                </svg>
+              </span>
             </div>
-            <p className="mt-1 text-xs font-medium uppercase tracking-wide text-muted">
-              {framework.fullName}
-            </p>
-            <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+            <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted">
               {framework.summary}
             </p>
-            <Link
-              href={`/frameworks/${framework.slug}`}
-              className="mt-4 text-sm font-semibold text-brand-700 hover:text-brand-800"
-            >
+            <span className="mt-4 text-sm font-semibold text-brand-700 group-hover:text-brand-800">
               Read the explainer &rarr;
-            </Link>
+            </span>
           </Card>
         ))}
       </div>

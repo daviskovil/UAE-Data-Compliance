@@ -19,7 +19,7 @@ export function VendorGrid({
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <div className="grid items-start gap-4 sm:grid-cols-2 xl:grid-cols-3">
       {vendors.map((vendor) => (
         <VendorCard
           key={vendor.id}
