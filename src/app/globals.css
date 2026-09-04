@@ -14,42 +14,42 @@
    * the rest. Background stays essentially white. */
   --color-canvas: #f6f7f7;
   --color-surface: #ffffff;
-  --color-ink: #12141a;
+  --color-ink: #26282e;
   --color-muted: #545b66;
   --color-line: #e6e7ea;
 
-  /* Flag green - primary. */
-  --color-brand-50: #e9f6ee;
-  --color-brand-100: #c7e9d4;
-  --color-brand-200: #97d5b1;
-  --color-brand-300: #5fbd8a;
-  --color-brand-400: #2aa163;
-  --color-brand-500: #058a45;
-  --color-brand-600: #07753b;
-  --color-brand-700: #075f31;
-  --color-brand-800: #084d2a;
-  --color-brand-900: #073d23;
+  /* Brand green #00843D - primary. */
+  --color-brand-50: #e6f3ec;
+  --color-brand-100: #bfe0cd;
+  --color-brand-200: #8fc7a6;
+  --color-brand-300: #57ab7c;
+  --color-brand-400: #1a9a54;
+  --color-brand-500: #0b9247;
+  --color-brand-600: #00843d;
+  --color-brand-700: #006e33;
+  --color-brand-800: #005728;
+  --color-brand-900: #00441f;
 
-  /* Flag red - sporadic emphasis and destructive/error. */
-  --color-accent-50: #fdecec;
-  --color-accent-100: #fad3d4;
-  --color-accent-400: #ec5b63;
-  --color-accent-500: #d81f2c;
-  --color-accent-600: #bb1622;
-  --color-accent-700: #97101b;
+  /* Brand red #C8102E - sporadic emphasis and destructive/error. */
+  --color-accent-50: #fbe7ea;
+  --color-accent-100: #f4c2c9;
+  --color-accent-400: #e04155;
+  --color-accent-500: #c8102e;
+  --color-accent-600: #a90d27;
+  --color-accent-700: #87091f;
 
   /* Positive / verified / success - the same green as brand. */
-  --color-mint-50: #e9f6ee;
-  --color-mint-100: #c7e9d4;
-  --color-mint-500: #058a45;
-  --color-mint-600: #07753b;
-  --color-mint-700: #075f31;
+  --color-mint-50: #e6f3ec;
+  --color-mint-100: #bfe0cd;
+  --color-mint-500: #00843d;
+  --color-mint-600: #006e33;
+  --color-mint-700: #005728;
 
-  /* Errors / destructive - the flag red. */
-  --color-danger-50: #fdecec;
-  --color-danger-100: #fad3d4;
-  --color-danger-500: #d81f2c;
-  --color-danger-600: #bb1622;
+  /* Errors / destructive - the brand red. */
+  --color-danger-50: #fbe7ea;
+  --color-danger-100: #f4c2c9;
+  --color-danger-500: #c8102e;
+  --color-danger-600: #a90d27;
 
   --radius-card: 1.25rem;
   --radius-btn: 0.7rem;

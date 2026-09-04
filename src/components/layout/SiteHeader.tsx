@@ -4,20 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
-import { primaryNav, site } from "@/lib/site";
-
-function Wordmark() {
-  return (
-    <Link href="/" className="flex items-center gap-2">
-      <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">
-        AE
-      </span>
-      <span className="text-[15px] font-bold leading-tight tracking-tight text-ink">
-        {site.name}
-      </span>
-    </Link>
-  );
-}
+import { Logo } from "@/components/ui/Logo";
+import { primaryNav } from "@/lib/site";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -29,7 +17,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-surface/90 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between gap-4">
-        <Wordmark />
+        <Logo markClassName="h-8 w-8" />
 
         <nav className="hidden items-center gap-1 md:flex">
           {primaryNav.map((item) => (

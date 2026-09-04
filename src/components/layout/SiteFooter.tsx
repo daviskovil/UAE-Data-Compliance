@@ -2,6 +2,7 @@ import Link from "next/link";
 import { db } from "@/data";
 import { footerLinks, site } from "@/lib/site";
 import { getFrameworks } from "@/lib/content";
+import { LogoMark } from "@/components/ui/Logo";
 
 export async function SiteFooter() {
   const vendorCount = await db.countVendors();
@@ -13,10 +14,8 @@ export async function SiteFooter() {
       <div className="container-page py-12">
         <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">
-                AE
-              </span>
+            <div className="flex items-center gap-2.5">
+              <LogoMark className="h-8 w-8" />
               <span className="text-sm font-bold text-ink">{site.name}</span>
             </div>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
