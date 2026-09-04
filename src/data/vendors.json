@@ -8,10 +8,22 @@
     "description": "Sample listing. Boutique privacy consultancy running PDPL readiness programmes for UAE SMEs and mid-market groups.",
     "websiteUrl": "https://example.com/desertshield",
     "contactEmail": "hello@example.com",
-    "frameworks": ["pdpl", "tdra-ccrf"],
-    "sectors": ["general-sme", "finance"],
-    "categories": ["pdpl-consultants", "grc-dpo-services"],
-    "regions": ["Dubai", "Abu Dhabi"],
+    "frameworks": [
+      "pdpl",
+      "tdra-ccrf"
+    ],
+    "sectors": [
+      "general-sme",
+      "finance"
+    ],
+    "categories": [
+      "pdpl-consultants",
+      "grc-dpo-services"
+    ],
+    "regions": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
     "verified": true,
     "featured": false,
     "status": "approved",
@@ -26,10 +38,21 @@
     "description": "Sample listing. GRC firm covering NESA / IA Standards and DESC ISR assessments for government-adjacent suppliers.",
     "websiteUrl": "https://example.com/falcon-grc",
     "contactEmail": "hello@example.com",
-    "frameworks": ["nesa", "desc", "pdpl"],
-    "sectors": ["government", "finance"],
-    "categories": ["grc-dpo-services"],
-    "regions": ["Dubai"],
+    "frameworks": [
+      "nesa",
+      "desc",
+      "pdpl"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "categories": [
+      "grc-dpo-services"
+    ],
+    "regions": [
+      "Dubai"
+    ],
     "verified": true,
     "featured": false,
     "status": "approved",
@@ -44,10 +67,24 @@
     "description": "Sample listing. UAE-based Tier III data centre and TDRA-registered cloud provider for in-country residency workloads.",
     "websiteUrl": "https://example.com/gulfhost",
     "contactEmail": "hello@example.com",
-    "frameworks": ["tdra-ccrf", "cbuae", "mohap"],
-    "sectors": ["finance", "healthcare", "government"],
-    "categories": ["uae-data-centers"],
-    "regions": ["Abu Dhabi", "Dubai", "Sharjah"],
+    "frameworks": [
+      "tdra-ccrf",
+      "cbuae",
+      "mohap"
+    ],
+    "sectors": [
+      "finance",
+      "healthcare",
+      "government"
+    ],
+    "categories": [
+      "uae-data-centers"
+    ],
+    "regions": [
+      "Abu Dhabi",
+      "Dubai",
+      "Sharjah"
+    ],
     "verified": true,
     "featured": false,
     "status": "approved",
@@ -62,10 +99,21 @@
     "description": "Sample listing. Health data specialists handling MOHAP / DHA / DoH residency exceptions and platform connectivity.",
     "websiteUrl": "https://example.com/medisafe",
     "contactEmail": "hello@example.com",
-    "frameworks": ["mohap", "pdpl"],
-    "sectors": ["healthcare"],
-    "categories": ["healthcare-data-compliance", "pdpl-consultants"],
-    "regions": ["Dubai", "Abu Dhabi"],
+    "frameworks": [
+      "mohap",
+      "pdpl"
+    ],
+    "sectors": [
+      "healthcare"
+    ],
+    "categories": [
+      "healthcare-data-compliance",
+      "pdpl-consultants"
+    ],
+    "regions": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
     "verified": false,
     "featured": false,
     "status": "approved",
@@ -80,10 +128,21 @@
     "description": "Sample listing. DIFC-based law firm with a data protection and technology practice covering DIFC, ADGM and federal PDPL.",
     "websiteUrl": "https://example.com/northbay",
     "contactEmail": "hello@example.com",
-    "frameworks": ["pdpl", "cbuae"],
-    "sectors": ["finance", "general-sme"],
-    "categories": ["law-firms-data-protection", "finance-cbuae-compliance"],
-    "regions": ["Dubai"],
+    "frameworks": [
+      "pdpl",
+      "cbuae"
+    ],
+    "sectors": [
+      "finance",
+      "general-sme"
+    ],
+    "categories": [
+      "law-firms-data-protection",
+      "finance-cbuae-compliance"
+    ],
+    "regions": [
+      "Dubai"
+    ],
     "verified": true,
     "featured": false,
     "status": "approved",
@@ -98,13 +157,713 @@
     "description": "Sample listing. DPO-as-a-service for UAE businesses that need a named Data Protection Officer without a full-time hire.",
     "websiteUrl": "https://example.com/sandune",
     "contactEmail": "hello@example.com",
-    "frameworks": ["pdpl"],
-    "sectors": ["general-sme", "healthcare", "finance"],
-    "categories": ["grc-dpo-services", "pdpl-consultants"],
-    "regions": ["Remote / UAE-wide"],
+    "frameworks": [
+      "pdpl"
+    ],
+    "sectors": [
+      "general-sme",
+      "healthcare",
+      "finance"
+    ],
+    "categories": [
+      "grc-dpo-services",
+      "pdpl-consultants"
+    ],
+    "regions": [
+      "Remote / UAE-wide"
+    ],
     "verified": false,
     "featured": false,
     "status": "approved",
     "createdAt": "2026-08-28"
+  },
+  {
+    "id": "v-quartz-data-rights-advisory",
+    "name": "Quartz Data Rights Advisory",
+    "slug": "quartz-data-rights-advisory",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A PDPL consultancy working with government-adjacent organisations on PDPL/NESA compliance.",
+    "websiteUrl": "https://quartz-data-rights-advisory.example.com",
+    "contactEmail": "hello@quartz-data-rights-advisory.example.com",
+    "frameworks": [
+      "pdpl",
+      "nesa"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "categories": [
+      "pdpl-consultants"
+    ],
+    "regions": [
+      "Remote / UAE-wide",
+      "Abu Dhabi"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-07-07"
+  },
+  {
+    "id": "v-wavecrest-compliance-partners",
+    "name": "Wavecrest Compliance Partners",
+    "slug": "wavecrest-compliance-partners",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE-based PDPL consultancy focused on PDPL/NESA readiness for general SMEs and healthcare providers.",
+    "websiteUrl": "https://wavecrest-compliance-partners.example.com",
+    "contactEmail": "hello@wavecrest-compliance-partners.example.com",
+    "frameworks": [
+      "pdpl",
+      "nesa"
+    ],
+    "sectors": [
+      "general-sme",
+      "healthcare"
+    ],
+    "categories": [
+      "pdpl-consultants"
+    ],
+    "regions": [
+      "Remote / UAE-wide"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-03-17"
+  },
+  {
+    "id": "v-marina-data-governance-group",
+    "name": "Marina Data Governance Group",
+    "slug": "marina-data-governance-group",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE-based PDPL consultancy focused on PDPL/NESA readiness for government-adjacent organisations and financial institutions.",
+    "websiteUrl": "https://marina-data-governance-group.example.com",
+    "contactEmail": "hello@marina-data-governance-group.example.com",
+    "frameworks": [
+      "pdpl",
+      "nesa"
+    ],
+    "sectors": [
+      "government",
+      "finance"
+    ],
+    "categories": [
+      "pdpl-consultants"
+    ],
+    "regions": [
+      "Ajman",
+      "Dubai"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-06-09"
+  },
+  {
+    "id": "v-eastport-privacy-practice",
+    "name": "Eastport Privacy Practice",
+    "slug": "eastport-privacy-practice",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A PDPL consultancy working with general SMEs and financial institutions on PDPL/CBUAE/MOHAP compliance.",
+    "websiteUrl": "https://eastport-privacy-practice.example.com",
+    "contactEmail": "hello@eastport-privacy-practice.example.com",
+    "frameworks": [
+      "pdpl",
+      "cbuae",
+      "mohap"
+    ],
+    "sectors": [
+      "general-sme",
+      "finance"
+    ],
+    "categories": [
+      "pdpl-consultants"
+    ],
+    "regions": [
+      "Umm Al Quwain",
+      "Ajman"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-04-17"
+  },
+  {
+    "id": "v-bridgeway-privacy-advisors",
+    "name": "Bridgeway Privacy Advisors",
+    "slug": "bridgeway-privacy-advisors",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Helps financial institutions meet PDPL obligations end to end.",
+    "websiteUrl": "https://bridgeway-privacy-advisors.example.com",
+    "contactEmail": "hello@bridgeway-privacy-advisors.example.com",
+    "frameworks": [
+      "pdpl"
+    ],
+    "sectors": [
+      "finance"
+    ],
+    "categories": [
+      "pdpl-consultants"
+    ],
+    "regions": [
+      "Fujairah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-04-17"
+  },
+  {
+    "id": "v-meadow-assurance-group",
+    "name": "Meadow Assurance Group",
+    "slug": "meadow-assurance-group",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A GRC and DPO services provider working with government-adjacent organisations and healthcare providers on PDPL/NESA compliance.",
+    "websiteUrl": "https://meadow-assurance-group.example.com",
+    "contactEmail": "hello@meadow-assurance-group.example.com",
+    "frameworks": [
+      "pdpl",
+      "nesa"
+    ],
+    "sectors": [
+      "government",
+      "healthcare"
+    ],
+    "categories": [
+      "grc-dpo-services"
+    ],
+    "regions": [
+      "Sharjah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-04-28"
+  },
+  {
+    "id": "v-cornerstone-risk-and-compliance",
+    "name": "Cornerstone Risk & Compliance",
+    "slug": "cornerstone-risk-and-compliance",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE-based GRC and DPO services provider focused on PDPL/NESA readiness for healthcare providers and financial institutions.",
+    "websiteUrl": "https://cornerstone-risk-and-compliance.example.com",
+    "contactEmail": "hello@cornerstone-risk-and-compliance.example.com",
+    "frameworks": [
+      "pdpl",
+      "nesa"
+    ],
+    "sectors": [
+      "healthcare",
+      "finance"
+    ],
+    "categories": [
+      "grc-dpo-services"
+    ],
+    "regions": [
+      "Fujairah",
+      "Ajman"
+    ],
+    "verified": true,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-07-12"
+  },
+  {
+    "id": "v-greenfield-grc-partners",
+    "name": "Greenfield GRC Partners",
+    "slug": "greenfield-grc-partners",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Runs practical PDPL programmes for general SMEs and government-adjacent organisations.",
+    "websiteUrl": "https://greenfield-grc-partners.example.com",
+    "contactEmail": "hello@greenfield-grc-partners.example.com",
+    "frameworks": [
+      "pdpl"
+    ],
+    "sectors": [
+      "general-sme",
+      "government"
+    ],
+    "categories": [
+      "grc-dpo-services"
+    ],
+    "regions": [
+      "Umm Al Quwain"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-08-09"
+  },
+  {
+    "id": "v-lighthouse-governance-partners",
+    "name": "Lighthouse Governance Partners",
+    "slug": "lighthouse-governance-partners",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Helps government-adjacent organisations meet PDPL/NESA/CBUAE obligations end to end.",
+    "websiteUrl": "https://lighthouse-governance-partners.example.com",
+    "contactEmail": "hello@lighthouse-governance-partners.example.com",
+    "frameworks": [
+      "pdpl",
+      "nesa",
+      "cbuae"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "categories": [
+      "grc-dpo-services"
+    ],
+    "regions": [
+      "Ajman"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-07-22"
+  },
+  {
+    "id": "v-lighthouse-cloud-partners",
+    "name": "Lighthouse Cloud Partners",
+    "slug": "lighthouse-cloud-partners",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE data centre and cloud provider working with financial institutions and general SMEs on TDRA/CCRF compliance.",
+    "websiteUrl": "https://lighthouse-cloud-partners.example.com",
+    "contactEmail": "hello@lighthouse-cloud-partners.example.com",
+    "frameworks": [
+      "tdra-ccrf"
+    ],
+    "sectors": [
+      "finance",
+      "general-sme"
+    ],
+    "categories": [
+      "uae-data-centers"
+    ],
+    "regions": [
+      "Sharjah",
+      "Umm Al Quwain"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-05-21"
+  },
+  {
+    "id": "v-harbor-cloud-services",
+    "name": "Harbor Cloud Services",
+    "slug": "harbor-cloud-services",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE data centre and cloud provider working with financial institutions on TDRA/CCRF compliance.",
+    "websiteUrl": "https://harbor-cloud-services.example.com",
+    "contactEmail": "hello@harbor-cloud-services.example.com",
+    "frameworks": [
+      "tdra-ccrf"
+    ],
+    "sectors": [
+      "finance"
+    ],
+    "categories": [
+      "uae-data-centers"
+    ],
+    "regions": [
+      "Dubai"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-06-15"
+  },
+  {
+    "id": "v-tidewater-digital-infrastructure",
+    "name": "Tidewater Digital Infrastructure",
+    "slug": "tidewater-digital-infrastructure",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE-based UAE data centre and cloud provider focused on TDRA/CCRF/MOHAP/CBUAE readiness for general SMEs and financial institutions.",
+    "websiteUrl": "https://tidewater-digital-infrastructure.example.com",
+    "contactEmail": "hello@tidewater-digital-infrastructure.example.com",
+    "frameworks": [
+      "tdra-ccrf",
+      "mohap",
+      "cbuae"
+    ],
+    "sectors": [
+      "general-sme",
+      "finance"
+    ],
+    "categories": [
+      "uae-data-centers"
+    ],
+    "regions": [
+      "Remote / UAE-wide",
+      "Sharjah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-02-01"
+  },
+  {
+    "id": "v-ridgecrest-hosting-solutions",
+    "name": "Ridgecrest Hosting Solutions",
+    "slug": "ridgecrest-hosting-solutions",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE data centre and cloud provider working with government-adjacent organisations on TDRA/CCRF/CBUAE compliance.",
+    "websiteUrl": "https://ridgecrest-hosting-solutions.example.com",
+    "contactEmail": "hello@ridgecrest-hosting-solutions.example.com",
+    "frameworks": [
+      "tdra-ccrf",
+      "cbuae"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "categories": [
+      "uae-data-centers"
+    ],
+    "regions": [
+      "Umm Al Quwain",
+      "Remote / UAE-wide"
+    ],
+    "verified": true,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-02-20"
+  },
+  {
+    "id": "v-lantern-meddata-advisors",
+    "name": "Lantern MedData Advisors",
+    "slug": "lantern-meddata-advisors",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Helps healthcare providers meet MOHAP obligations end to end.",
+    "websiteUrl": "https://lantern-meddata-advisors.example.com",
+    "contactEmail": "hello@lantern-meddata-advisors.example.com",
+    "frameworks": [
+      "mohap"
+    ],
+    "sectors": [
+      "healthcare"
+    ],
+    "categories": [
+      "healthcare-data-compliance"
+    ],
+    "regions": [
+      "Abu Dhabi",
+      "Umm Al Quwain"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-07-29"
+  },
+  {
+    "id": "v-compass-meddata-advisors",
+    "name": "Compass MedData Advisors",
+    "slug": "compass-meddata-advisors",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Runs practical MOHAP/PDPL programmes for healthcare providers.",
+    "websiteUrl": "https://compass-meddata-advisors.example.com",
+    "contactEmail": "hello@compass-meddata-advisors.example.com",
+    "frameworks": [
+      "mohap",
+      "pdpl"
+    ],
+    "sectors": [
+      "healthcare"
+    ],
+    "categories": [
+      "healthcare-data-compliance"
+    ],
+    "regions": [
+      "Ras Al Khaimah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": "v-nimbus-health-data-partners",
+    "name": "Nimbus Health Data Partners",
+    "slug": "nimbus-health-data-partners",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Helps healthcare providers meet MOHAP obligations end to end.",
+    "websiteUrl": "https://nimbus-health-data-partners.example.com",
+    "contactEmail": "hello@nimbus-health-data-partners.example.com",
+    "frameworks": [
+      "mohap"
+    ],
+    "sectors": [
+      "healthcare"
+    ],
+    "categories": [
+      "healthcare-data-compliance"
+    ],
+    "regions": [
+      "Sharjah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-02-09"
+  },
+  {
+    "id": "v-southbridge-health-data-partners",
+    "name": "Southbridge Health Data Partners",
+    "slug": "southbridge-health-data-partners",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A healthcare data compliance specialist working with healthcare providers on MOHAP/PDPL compliance.",
+    "websiteUrl": "https://southbridge-health-data-partners.example.com",
+    "contactEmail": "hello@southbridge-health-data-partners.example.com",
+    "frameworks": [
+      "mohap",
+      "pdpl"
+    ],
+    "sectors": [
+      "healthcare"
+    ],
+    "categories": [
+      "healthcare-data-compliance"
+    ],
+    "regions": [
+      "Sharjah",
+      "Ras Al Khaimah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-05-24"
+  },
+  {
+    "id": "v-greenfield-capital-compliance",
+    "name": "Greenfield Capital Compliance",
+    "slug": "greenfield-capital-compliance",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Runs practical CBUAE/PDPL programmes for financial institutions.",
+    "websiteUrl": "https://greenfield-capital-compliance.example.com",
+    "contactEmail": "hello@greenfield-capital-compliance.example.com",
+    "frameworks": [
+      "cbuae",
+      "pdpl"
+    ],
+    "sectors": [
+      "finance"
+    ],
+    "categories": [
+      "finance-cbuae-compliance"
+    ],
+    "regions": [
+      "Dubai",
+      "Abu Dhabi"
+    ],
+    "verified": true,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-01-28"
+  },
+  {
+    "id": "v-beacon-finreg-partners",
+    "name": "Beacon FinReg Partners",
+    "slug": "beacon-finreg-partners",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Helps financial institutions meet CBUAE/PDPL obligations end to end.",
+    "websiteUrl": "https://beacon-finreg-partners.example.com",
+    "contactEmail": "hello@beacon-finreg-partners.example.com",
+    "frameworks": [
+      "cbuae",
+      "pdpl"
+    ],
+    "sectors": [
+      "finance"
+    ],
+    "categories": [
+      "finance-cbuae-compliance"
+    ],
+    "regions": [
+      "Fujairah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-02-10"
+  },
+  {
+    "id": "v-redline-financial-risk-advisors",
+    "name": "Redline Financial Risk Advisors",
+    "slug": "redline-financial-risk-advisors",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE-based financial compliance advisor focused on CBUAE readiness for financial institutions.",
+    "websiteUrl": "https://redline-financial-risk-advisors.example.com",
+    "contactEmail": "hello@redline-financial-risk-advisors.example.com",
+    "frameworks": [
+      "cbuae"
+    ],
+    "sectors": [
+      "finance"
+    ],
+    "categories": [
+      "finance-cbuae-compliance"
+    ],
+    "regions": [
+      "Ajman"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-03-19"
+  },
+  {
+    "id": "v-bluepeak-finreg-partners",
+    "name": "Bluepeak FinReg Partners",
+    "slug": "bluepeak-finreg-partners",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE-based financial compliance advisor focused on CBUAE/PDPL readiness for financial institutions.",
+    "websiteUrl": "https://bluepeak-finreg-partners.example.com",
+    "contactEmail": "hello@bluepeak-finreg-partners.example.com",
+    "frameworks": [
+      "cbuae",
+      "pdpl"
+    ],
+    "sectors": [
+      "finance"
+    ],
+    "categories": [
+      "finance-cbuae-compliance"
+    ],
+    "regions": [
+      "Ras Al Khaimah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-05-30"
+  },
+  {
+    "id": "v-nimbus-legal-advisors",
+    "name": "Nimbus Legal Advisors",
+    "slug": "nimbus-legal-advisors",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Helps financial institutions meet PDPL obligations end to end.",
+    "websiteUrl": "https://nimbus-legal-advisors.example.com",
+    "contactEmail": "hello@nimbus-legal-advisors.example.com",
+    "frameworks": [
+      "pdpl"
+    ],
+    "sectors": [
+      "finance"
+    ],
+    "categories": [
+      "law-firms-data-protection"
+    ],
+    "regions": [
+      "Sharjah"
+    ],
+    "verified": true,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-07-21"
+  },
+  {
+    "id": "v-baseline-legal-advisors",
+    "name": "Baseline Legal Advisors",
+    "slug": "baseline-legal-advisors",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. Runs practical PDPL programmes for financial institutions and healthcare providers.",
+    "websiteUrl": "https://baseline-legal-advisors.example.com",
+    "contactEmail": "hello@baseline-legal-advisors.example.com",
+    "frameworks": [
+      "pdpl"
+    ],
+    "sectors": [
+      "finance",
+      "healthcare"
+    ],
+    "categories": [
+      "law-firms-data-protection"
+    ],
+    "regions": [
+      "Fujairah"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-04-01"
+  },
+  {
+    "id": "v-eastport-legal-advisors",
+    "name": "Eastport Legal Advisors",
+    "slug": "eastport-legal-advisors",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A law firm working with government-adjacent organisations on PDPL compliance.",
+    "websiteUrl": "https://eastport-legal-advisors.example.com",
+    "contactEmail": "hello@eastport-legal-advisors.example.com",
+    "frameworks": [
+      "pdpl"
+    ],
+    "sectors": [
+      "government"
+    ],
+    "categories": [
+      "law-firms-data-protection"
+    ],
+    "regions": [
+      "Remote / UAE-wide",
+      "Sharjah"
+    ],
+    "verified": true,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-08-05"
+  },
+  {
+    "id": "v-lantern-law-firm",
+    "name": "Lantern Law Firm",
+    "slug": "lantern-law-firm",
+    "sample": true,
+    "logoUrl": "/logos/placeholder.svg",
+    "description": "Sample listing. A UAE-based law firm focused on PDPL/MOHAP/CBUAE readiness for financial institutions.",
+    "websiteUrl": "https://lantern-law-firm.example.com",
+    "contactEmail": "hello@lantern-law-firm.example.com",
+    "frameworks": [
+      "pdpl",
+      "mohap",
+      "cbuae"
+    ],
+    "sectors": [
+      "finance"
+    ],
+    "categories": [
+      "law-firms-data-protection"
+    ],
+    "regions": [
+      "Abu Dhabi"
+    ],
+    "verified": false,
+    "featured": false,
+    "status": "approved",
+    "createdAt": "2026-02-21"
   }
 ]

@@ -56,8 +56,11 @@ No environment variables are required for the scaffold. Copy `.env.example` to
 - **Content is placeholder.** Framework explainers, blog posts and the
   privacy/terms pages are marked draft and need founder-authored copy before
   launch (SRS section 11).
-- **Vendor seed data is fictional** (`sample: true`). Replace with the 15-20
-  real launch vendors.
+- **Vendor seed data is fictional** (`sample: true`, `*.example.com`). Generated
+  in batches by `scripts/generate-vendors.mjs --batch=1|2|3|4` (25 at a time,
+  deterministic/reproducible, spread across every framework/sector/category/
+  emirate) - see that file for the distribution. Replace with real launch
+  vendors before going live.
 - **No real persistence.** Submissions and leads append to `.data/*.local.json`.
   Move to Supabase via a new `DataRepository` implementation.
 - **No email.** Submission confirmations and lead routing are `TODO(email)` in
